@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>VyperVerse - Expense Splitter dApp</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=2025">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -14,8 +17,21 @@
         <header class="header">
             <div class="header-content">
                 <h1 class="logo">
-                    <i class="fas fa-snake"></i>
-                    VyperVerse
+                    <div class="logo-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2L20 8H28L24 14L28 20H20L16 26L12 20H4L8 14L4 8H12L16 2Z" fill="url(#vyperGradient)"/>
+                            <defs>
+                                <linearGradient id="vyperGradient" x1="4" y1="8" x2="28" y2="20" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#667eea"/>
+                                    <stop offset="1" stop-color="#764ba2"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <span class="logo-text">
+                        <span class="logo-main">Vyper</span>
+                        <span class="logo-sub">Verse</span>
+                    </span>
                 </h1>
                 <div class="wallet-section">
                     <button id="connectWallet" class="btn btn-primary">
@@ -29,6 +45,31 @@
                 </div>
             </div>
         </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2 class="hero-title">Expense Splitter dApp</h2>
+                <p class="hero-description">
+                    A decentralized application built with Vyper smart contracts for splitting expenses among friends, 
+                    roommates, or travel companions. Fair, transparent, and secure.
+                </p>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure & Transparent</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-users"></i>
+                        <span>Multi-Participant</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-calculator"></i>
+                        <span>Auto-Split</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Main Content -->
         <main class="main-content">
@@ -151,7 +192,7 @@
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
-                <p>&copy; 2024 VyperVerse Workshop. Built with ❤️ by <a href="https://x.com/he2plus" target="_blank">@he2plus</a></p>
+                <p>&copy; 2025 VyperVerse Workshop. Built with ❤️ by <a href="https://x.com/he2plus" target="_blank">@he2plus</a></p>
                 <div class="footer-links">
                     <a href="https://github.com/he2plus/vyper-devs" target="_blank">
                         <i class="fab fa-github"></i> GitHub
@@ -177,6 +218,6 @@
 
     <!-- Scripts -->
     <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js"></script>
-    <script src="app.js"></script>
+    <script src="app.js?v=2025"></script>
 </body>
 </html>

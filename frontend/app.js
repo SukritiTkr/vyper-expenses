@@ -119,8 +119,11 @@ async function connectWallet() {
         userAddress = await signer.getAddress();
         
         // Update UI
-        document.getElementById('connectWallet').style.display = 'none';
-        document.getElementById('walletInfo').style.display = 'flex';
+        const connectBtn = document.getElementById('connectWallet');
+        const walletInfo = document.getElementById('walletInfo');
+        
+        if (connectBtn) connectBtn.style.display = 'none';
+        if (walletInfo) walletInfo.style.display = 'flex';
         document.getElementById('walletAddress').textContent = 
             `${userAddress.slice(0, 6)}...${userAddress.slice(-4)}`;
         
