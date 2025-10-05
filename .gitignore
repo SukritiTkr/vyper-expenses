@@ -199,3 +199,4 @@ dev_settings.json
 *_web3_deploy.py
 bytecode.txt
 abi.json
+frontend_backup_*/
