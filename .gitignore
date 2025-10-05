@@ -191,3 +191,11 @@ participant_data/
 # Local development
 local_config.py
 dev_settings.json
+
+# Deployment artifacts (temporary files)
+*_bytecode.txt
+*_abi.json
+*_remix_deploy.js
+*_web3_deploy.py
+bytecode.txt
+abi.json
