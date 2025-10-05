@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VyperVerse - Expense Splitter dApp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">
+                    <i class="fas fa-snake"></i>
+                    VyperVerse
+                </h1>
+                <div class="wallet-section">
+                    <button id="connectWallet" class="btn btn-primary">
+                        <i class="fas fa-wallet"></i>
+                        Connect Wallet
+                    </button>
+                    <div id="walletInfo" class="wallet-info" style="display: none;">
+                        <span id="walletAddress"></span>
+                        <span id="walletBalance"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Contract Connection -->
+            <section class="section">
+                <h2><i class="fas fa-link"></i> Contract Connection</h2>
+                <div class="form-group">
+                    <label for="contractAddress">Contract Address:</label>
+                    <input type="text" id="contractAddress" placeholder="0x..." class="input">
+                    <button id="loadContract" class="btn btn-secondary">Load Contract</button>
+                </div>
+                <div id="contractStatus" class="status-message"></div>
+            </section>
+
+            <!-- Contract Info -->
+            <section class="section" id="contractInfo" style="display: none;">
+                <h2><i class="fas fa-info-circle"></i> Contract Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Total Expenses:</label>
+                        <span id="totalExpenses">0 ETH</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Expense Count:</label>
+                        <span id="expenseCount">0</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Participants:</label>
+                        <span id="participantCount">0</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Contract Balance:</label>
+                        <span id="contractBalance">0 ETH</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Your Balance:</label>
+                        <span id="yourBalance">0 ETH</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Equal Split:</label>
+                        <span id="equalSplit">0 ETH</span>
+                    </div>
+                </div>
+                <button id="refreshData" class="btn btn-secondary">
+                    <i class="fas fa-sync-alt"></i>
+                    Refresh Data
+                </button>
+            </section>
+
+            <!-- Record Expense -->
+            <section class="section">
+                <h2><i class="fas fa-plus-circle"></i> Record Expense</h2>
+                <div class="form-group">
+                    <label for="expenseDesc">Description:</label>
+                    <input type="text" id="expenseDesc" placeholder="e.g., Coffee, Lunch, Gas" class="input">
+                </div>
+                <div class="form-group">
+                    <label for="expenseAmount">Amount (ETH):</label>
+                    <input type="number" id="expenseAmount" placeholder="0.1" step="0.001" class="input">
+                </div>
+                <button id="recordExpense" class="btn btn-primary">
+                    <i class="fas fa-receipt"></i>
+                    Record Expense
+                </button>
+                <div id="expenseAlert" class="alert"></div>
+            </section>
+
+            <!-- Add Participant -->
+            <section class="section">
+                <h2><i class="fas fa-user-plus"></i> Add Participant</h2>
+                <div class="form-group">
+                    <label for="participantAddress">Participant Address:</label>
+                    <input type="text" id="participantAddress" placeholder="0x..." class="input">
+                </div>
+                <button id="addParticipant" class="btn btn-primary">
+                    <i class="fas fa-user-plus"></i>
+                    Add Participant
+                </button>
+                <div id="participantAlert" class="alert"></div>
+            </section>
+
+            <!-- Contribute Funds -->
+            <section class="section">
+                <h2><i class="fas fa-coins"></i> Contribute Funds</h2>
+                <div class="form-group">
+                    <label for="contributeAmount">Amount (ETH):</label>
+                    <input type="number" id="contributeAmount" placeholder="0.1" step="0.001" class="input">
+                </div>
+                <button id="contribute" class="btn btn-primary">
+                    <i class="fas fa-coins"></i>
+                    Contribute
+                </button>
+                <div id="contributeAlert" class="alert"></div>
+            </section>
+
+            <!-- Settle Expenses -->
+            <section class="section">
+                <h2><i class="fas fa-calculator"></i> Settle Expenses</h2>
+                <p class="description">Settle your outstanding expenses and receive payment.</p>
+                <button id="settleExpenses" class="btn btn-success">
+                    <i class="fas fa-calculator"></i>
+                    Settle My Expenses
+                </button>
+                <div id="settleAlert" class="alert"></div>
+            </section>
+
+            <!-- Participants List -->
+            <section class="section" id="participantsSection" style="display: none;">
+                <h2><i class="fas fa-users"></i> Participants</h2>
+                <div id="participantsList" class="participants-list"></div>
+            </section>
+
+            <!-- Transaction History -->
+            <section class="section" id="transactionHistory" style="display: none;">
+                <h2><i class="fas fa-history"></i> Recent Transactions</h2>
+                <div id="transactionList" class="transaction-list"></div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 VyperVerse Workshop. Built with ❤️ by <a href="https://x.com/he2plus" target="_blank">@he2plus</a></p>
+                <div class="footer-links">
+                    <a href="https://github.com/he2plus/vyper-devs" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://vyper.readthedocs.io/" target="_blank">
+                        <i class="fas fa-book"></i> Vyper Docs
+                    </a>
+                    <a href="https://remix.ethereum.org" target="_blank">
+                        <i class="fas fa-code"></i> Remix IDE
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Processing transaction...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
