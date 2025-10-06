@@ -36,9 +36,9 @@ cd vyper-devs
 
 ```
 vyper-devs/
-├── 📄 README.md                    # This file
-├── 📄 LICENSE                      # MIT License
-├── 📄 .gitignore                   # Git ignore rules
+├── 📄 README.md                    
+├── 📄 LICENSE                      
+├── 📄 .gitignore                   
 ├── 📁 contracts/                   # Smart contracts
 │   ├── 📁 dev/                     # Development templates
 │   │   ├── 📄 ExpenseSplitter_Template.vy
@@ -47,25 +47,25 @@ vyper-devs/
 │   └── 📁 solutions/               # Complete solutions
 │       ├── 📄 ExpenseSplitter_Basic.vy
 │       └── 📄 ExpenseSplitter_Complete.vy
-├── 📁 frontend/                    # Web3 frontend
+├── 📁 frontend/                    
 │   ├── 📄 index.html
 │   ├── 📄 app.js
 │   ├── 📄 styles.css
 │   └── 📄 abi.json
-├── 📁 docs/                        # Documentation
+├── 📁 docs/                        
 │   ├── 📄 01_blockchain_basics.md
 │   ├── 📄 02_smart_contracts.md
 │   ├── 📄 03_vyper_guide.md
 │   ├── 📄 04_python_to_vyper.md
 │   └── 📄 05_deployment_guide.md
-├── 📁 scripts/                     # Automation scripts
+├── 📁 scripts/                     
 │   ├── 📄 deploy.py
 │   └── 📄 interact.py
-├── 📁 resources/                   # Additional resources
+├── 📁 resources/                   
 │   ├── 📄 testnet_faucets.md
 │   ├── 📄 useful_links.md
 │   └── 📄 troubleshooting.md
-└── 📄 WORKSHOP_GUIDE.md            # Complete workshop guide
+└── 📄 WORKSHOP_GUIDE.md            
 ```
 
 ## 🎯 Learning Path
@@ -172,13 +172,6 @@ python -m http.server 8000
 | **Berachain Testnet** | `https://testnet-rpc.berachain.com` | [faucet.berachain.com](https://faucet.berachain.com) | [testnet-scan.berachain.com](https://testnet-scan.berachain.com) |
 | **Ethereum Sepolia** | `https://rpc.sepolia.org` | [sepoliafaucet.com](https://sepoliafaucet.com) | [sepolia.etherscan.io](https://sepolia.etherscan.io) |
 
-## 🎓 Workshop Guide
-
-Follow the complete workshop guide in `WORKSHOP_GUIDE.md` for:
-- Step-by-step instructions
-- Learning objectives
-- Assessment criteria
-- Troubleshooting tips
 
 ## 🔧 Development Tools
 
@@ -195,31 +188,8 @@ Follow the complete workshop guide in `WORKSHOP_GUIDE.md` for:
 ### Testing & Deployment
 - **Testnets**: Multiple EVM-compatible networks
 - **Block Explorers**: Contract verification
-- **Gas Optimization**: Best practices included
 
-## 🐛 Troubleshooting
 
-### Common Issues
-
-1. **Contract Won't Compile**
-   - Check Vyper version (0.4.1)
-   - Verify EVM version (Cancun)
-   - Review syntax errors in console
-
-2. **MetaMask Connection Failed**
-   - Ensure MetaMask is unlocked
-   - Check network configuration
-   - Refresh page and try again
-
-3. **Transaction Stuck**
-   - Increase gas price in MetaMask
-   - Check network congestion
-   - Wait for confirmation
-
-4. **Frontend Not Loading**
-   - Check browser console for errors
-   - Verify contract address is correct
-   - Ensure ABI matches deployed contract
 
 ### Getting Help
 
@@ -234,16 +204,11 @@ We welcome contributions! Please see our contributing guidelines:
 
 1. **Fork the repository**
 2. **Create feature branch**: `git checkout -b feature/amazing-feature`
-3. **Commit changes**: `git commit -m 'Add amazing feature'`
+3. **Commit changes**: `git commit -m 'Add more feature'`
 4. **Push to branch**: `git push origin feature/amazing-feature`
 5. **Open Pull Request**
 
-### Contribution Areas
-- 🐛 Bug fixes and improvements
-- 📚 Documentation updates
-- 🎨 Frontend enhancements
-- 🔧 Tooling and scripts
-- 🎓 Educational content
+
 
 ## 📜 License
 
@@ -292,24 +257,5 @@ After completing this workshop, you will:
 - ✅ Debug and troubleshoot common issues
 - ✅ Have a complete project for your portfolio
 
-## 🆕 Recent Updates (2025)
-
-### Frontend Enhancements
-- ✨ **Professional Logo**: Custom Vyper-inspired SVG logo with gradient effects
-- 🎨 **Enhanced Typography**: Improved font stack with SF Pro Display and better letter spacing
-- 🚀 **Hero Section**: Added professional landing section with feature highlights
-- 💫 **Advanced Animations**: Smooth transitions and hover effects with cubic-bezier easing
-- 📱 **Responsive Design**: Optimized for all screen sizes with mobile-first approach
-- 🎯 **Better UX**: Enhanced form styling, button interactions, and visual feedback
-
-### Technical Improvements
-- 🔧 **Backup System**: Automatic backup of working versions before updates
-- 📅 **Updated Copyright**: Footer updated to 2025
-- 🎨 **Professional Styling**: Glassmorphism effects and modern design patterns
-- ⚡ **Performance**: Optimized CSS with better font rendering and smooth animations
-
-**Ready to start your Web3 journey? Let's build the future together! 🚀**
-
----
 
 *This workshop is designed for educational purposes. Always test thoroughly on testnets before mainnet deployment.*
