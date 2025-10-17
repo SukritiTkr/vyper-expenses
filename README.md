@@ -6,11 +6,11 @@
 
 ## 📚 Overview
 
-This repository contains my fully completed exercises and solutions from the **Vyper smart contract workshop**. It demonstrates:
+This repository contains my fully completed exercises and solutions from the **Vyper Lang - Blockchain Hands On Workshop**. It demonstrates:
 
 * Writing and testing smart contracts in Vyper
-* Managing mappings, balances, and events
-* Deploying contracts to EVM-compatible testnets (including Sepolia)
+* Managing mappings, balances and events
+* Deploying contracts to EVM compatible testnets (including Sepolia)
 * Interacting with a simple Web3 frontend
 * Applying security and best practices in contract development
 
@@ -62,7 +62,7 @@ By completing these exercises, I can:
 
 * Write and test Vyper smart contracts from scratch
 * Work with mappings, balances, and events
-* Deploy contracts to Sepolia and other EVM-compatible testnets
+* Deploy contracts to Sepolia and other EVM compatible testnets
 * Interact with contracts using a Web3 frontend
 * Follow security best practices and troubleshoot common issues
 
@@ -101,4 +101,4 @@ This project is licensed under the MIT License — see [LICENSE](LICENSE) for de
 
 ## 🙏 Acknowledgments
 
-* **VyperVerse Workshop** by [he2plus](https://github.com/he2plus) for his guidance. 
+* **VyperVerse Workshop** by Prakhar Trpathi ([he2plus](https://github.com/he2plus)) for his excellent guidance and support. 
