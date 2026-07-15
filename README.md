@@ -2,7 +2,7 @@
 
 An educational and practical toolkit designed to demonstrate how investigators recover deleted files and trace USB connection history on Windows hosts.
 
-While Autopsy (the desktop application) handles the deep disk-image analysis and file carving, this repository contains the automation scripts to **generate test evidence**, **parse host-side registry artifacts**, and **auto-generate comprehensive investigation reports**.
+While Autopsy (the desktop application) handles the deep disk-image analysis and file carving, this repository contains the automation scripts to **generate test evidence**, **parse host-side registry artifacts** and **auto-generate comprehensive investigation reports**.
 
 ---
 
@@ -57,7 +57,7 @@ streamlit run app.py
 Follow these steps to run a complete, end-to-end USB forensic simulation:
 
 1. **Generate Test Evidence:** Step 1: Populate the Drive.
-Run the generation script against a target virtual disk (or a physical USB drive). This creates a known list of files, deletes a randomized subset, and saves a `manifest.json` as your "ground truth."
+Run the generation script against a target virtual disk (or a physical USB drive). This creates a known list of files, deletes a randomized subset and saves a `manifest.json` as your "ground truth."
 
 ```bash
 python scripts/generate_usb_testdata.py --target E:\ --count 15 --delete-ratio 0.4
