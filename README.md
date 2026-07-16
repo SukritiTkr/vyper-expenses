@@ -61,7 +61,7 @@ vyper-expenses/
 By completing these exercises, I can:
 
 * Write and test Vyper smart contracts from scratch
-* Work with mappings, balances, and events
+* Work with mappings, balances and events
 * Deploy contracts to Sepolia and other EVM compatible testnets
 * Interact with contracts using a Web3 frontend
 * Follow security best practices and troubleshoot common issues
